@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="styles.css">
+
+    <title>Pig Game</title>
+</head>
+
+<body>
+
+    <div class="wrapper clearfix">
+
+        <div class="hint">
+            <span>RULES</span>
+            The game has 2 players, playing in rounds.
+            <br />
+            In each turn, a player rolls dices as many times as he whishes. Each result get added to his ROUND (Current) score
+            - BUT, if the player rolls a 1 on one of the dices or on both of them, all his ROUND score gets lost. After that, it's the next player's turn
+            - The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn
+            - The winner is the player who reaches the GLOBAL score set in the score field, if the score is not set then the first player to reach 100 points on GLOBAL score wins the game.</div>
+
+        <div class="player-0-panel active">
+            <div class="player-name" id="name-0">Player 1</div>
+            <div class="player-score" id="score-0">0</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-0">0</div>
+            </div>
+        </div>
+
+        <div class="player-1-panel">
+            <div class="player-name" id="name-1">Player 2</div>
+            <div class="player-score" id="score-1">0</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-1">0</div>
+            </div>
+        </div>
+
+
+        <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+        <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+        <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+        <button class="btn-rules"><i class="ion-ios-help-outline"></i></button>
+
+        <input type="text" placeholder="Final score" class="final-score">
+
+        <img src="./images/dice-5.png" alt="Dice" class="dice" id="dice-1">
+        <img src="./images/dice-5.png" alt="Dice" class="dice" id="dice-2">
+
+    </div>
+
+    <script type="text/javascript" src="./logic.js"></script>
+
+</body>
+
+</html>
